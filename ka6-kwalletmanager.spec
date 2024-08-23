@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	24.05.2
+%define		kdeappsver	24.08.0
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		kwalletmanager
 Summary:	kwallet manager
 Name:		ka6-%{kaname}
-Version:	24.05.2
+Version:	24.08.0
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	24bf2f6b7611e3a642187a996795db8f
+# Source0-md5:	cc0776f2afc509ee73fa93b68e07c90b
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel
 BuildRequires:	Qt6Core-devel >= %{qtver}
@@ -97,7 +97,6 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_libdir}/qt6/plugins/plasma/kcms/systemsettings_qwidgets/kcm_kwallet5.so
 %attr(755,root,root) %{_prefix}/libexec/kf6/kauth/kcm_kwallet_helper5
 %{_desktopdir}/kwalletmanager5-kwalletd.desktop
-%{_desktopdir}/org.kde.kwalletmanager5.desktop
 %{_datadir}/dbus-1/services/org.kde.kwalletmanager5.service
 %{_datadir}/dbus-1/system-services/org.kde.kcontrol.kcmkwallet5.service
 %{_datadir}/dbus-1/system.d/org.kde.kcontrol.kcmkwallet5.conf
@@ -106,3 +105,4 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/metainfo/org.kde.kwalletmanager5.appdata.xml
 %{_datadir}/polkit-1/actions/org.kde.kcontrol.kcmkwallet5.policy
 %{_datadir}/qlogging-categories6/kwalletmanager.categories
+%{_desktopdir}/org.kde.kwalletmanager.desktop
