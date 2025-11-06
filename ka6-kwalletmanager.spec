@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	25.08.2
+%define		kdeappsver	25.08.3
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		kwalletmanager
 Summary:	kwallet manager
 Name:		ka6-%{kaname}
-Version:	25.08.2
-Release:	2
+Version:	25.08.3
+Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	395a967954d1ee08505ea57379eb23a6
+# Source0-md5:	63accd7a6d1829b56e4cc58ad8ead402
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel
 BuildRequires:	Qt6Core-devel >= %{qtver}
@@ -102,7 +102,7 @@ rm -rf $RPM_BUILD_ROOT
 %files -f %{kaname}.lang
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/kwalletmanager5
-%attr(755,root,root) %{_libdir}/qt6/plugins/plasma/kcms/systemsettings_qwidgets/kcm_kwallet5.so
+%{_libdir}/qt6/plugins/plasma/kcms/systemsettings_qwidgets/kcm_kwallet5.so
 %attr(755,root,root) %{_prefix}/libexec/kf6/kauth/kcm_kwallet_helper5
 %{_desktopdir}/kwalletmanager5-kwalletd.desktop
 %{_datadir}/dbus-1/system-services/org.kde.kcontrol.kcmkwallet5.service
