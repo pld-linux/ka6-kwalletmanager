@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	26.04.0
+%define		kdeappsver	26.04.1
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		kwalletmanager
 Summary:	kwallet manager
 Name:		ka6-%{kaname}
-Version:	26.04.0
-Release:	2
+Version:	26.04.1
+Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	b1bba54f7e78146a73ea811bd1735c42
+# Source0-md5:	1a8f82f6cd8ace7c5323a09185135731
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel
 BuildRequires:	Qt6Core-devel >= %{qtver}
